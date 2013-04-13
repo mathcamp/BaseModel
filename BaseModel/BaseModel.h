@@ -78,6 +78,7 @@ extern NSString *const BaseModelSharedInstanceUpdatedNotification;
 
 //creating instances from collection or string
 + (instancetype)instanceWithObject:(id)object;
++ (instancetype)instanceWithObjectNonNil:(id)object;
 - (instancetype)initWithObject:(id)object;
 + (NSArray *)instancesWithArray:(NSArray *)array;
 

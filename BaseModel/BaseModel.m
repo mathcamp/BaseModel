@@ -278,6 +278,12 @@ static NSMutableDictionary *classValues = nil;
     return object? [[self alloc] initWithObject:object]: nil;
 }
 
++ (instancetype)instanceWithObjectNonNil:(id)object
+{
+  //return an object even if the dict is nil
+  return [[self alloc] initWithObject:(object ? object : @{})];
+}
+
 - (NSString *)setterNameForClass:(Class)class
 {
     //get class name
